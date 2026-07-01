@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuración - Foundify</title>
+<link rel="stylesheet" href="stylecon.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+  <a href="inicio.html">🏠</a>
+  <a href="configuracion.html" class="activo">⚙️</a>
+</aside>
+
+<!-- Main -->
+<main class="main">
+
+  <div class="topbar">
+    <h1>Configuración</h1>
+  </div>
+
+  <div class="config-wrap">
+
+    <!-- Foto y datos del perfil -->
+    <div class="config-card">
+      <h2>Perfil</h2>
+      <p class="descripcion">Esta información se mostrará en tu perfil público.</p>
+
+      <div class="form-group">
+        <div class="foto-perfil">
+          <img src="https://i.pravatar.cc/100?img=33" alt="Foto de perfil">
+          <button type="button" class="btn-secundario">Cambiar foto</button>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Ej: Ana Morales">
+        </div>
+        <div class="form-group">
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" id="usuario" placeholder="Ej: ana_morales">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Biografía</label>
+        <textarea id="bio" placeholder="Cuéntanos sobre ti y tus proyectos..."></textarea>
+      </div>
+    </div>
+
+    <!-- Cuenta -->
+    <div class="config-card">
+      <h2>Cuenta</h2>
+      <p class="descripcion">Datos para iniciar sesión y recuperar tu cuenta.</p>
+
+      <div class="form-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" placeholder="tu@email.com">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password">Nueva contraseña</label>
+          <input type="password" id="password" placeholder="••••••••">
+        </div>
+        <div class="form-group">
+          <label for="password2">Confirmar contraseña</label>
+          <input type="password" id="password2" placeholder="••••••••">
+        </div>
+      </div>
+    </div>
+
+    <!-- Notificaciones -->
+    <div class="config-card">
+      <h2>Notificaciones</h2>
+      <p class="descripcion">Elige qué notificaciones quieres recibir.</p>
+
+      <div class="toggle-row">
+        <div class="info">
+          <h4>Me gusta en tus proyectos</h4>
+          <p>Recibe un aviso cuando alguien apoye tu publicación</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="toggle-row">
+        <div class="info">
+          <h4>Comentarios</h4>
+          <p>Recibe un aviso cuando comenten en tus proyectos</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="toggle-row">
+        <div class="info">
+          <h4>Nuevos seguidores</h4>
+          <p>Recibe un aviso cuando alguien te empiece a seguir</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="config-footer">
+      <button type="button" class="btn-secundario">Cancelar</button>
+      <button type="button" class="btn-publicar">Guardar cambios</button>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+/* ============================================================
+   FOUNDIFY - Estilos para la página de perfil
+   ============================================================ */
+
+/* Contenedor principal del perfil */
+.container {
+  max-width: 1120px;
+  margin: 40px auto 60px;
+  padding: 0 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.profile-overview,
+.activity-box {
+  width: 100%;
+}
+
+.profile-card {
+  width: 100%;
+  background: rgba(15, 23, 32, 0.95);
+  border: 1px solid rgba(32, 201, 151, 0.18);
+  border-radius: 28px;
+  padding: 32px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.profile-summary {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.profile-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-img {
+  width: 190px;
+  height: 190px;
+  border-radius: 32px;
+  border: 4px solid #20c997;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.profile-meta h1 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.title {
+  color: #94a3b8;
+  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+
+.description {
+  color: #cbd5e1;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: 720px;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.95rem 1.5rem;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #20c997, #38bdf8);
+  color: #070b13;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.07);
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.btn-tertiary {
+  background: rgba(255, 255, 255, 0.07);
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-tertiary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 20px;
+  padding: 18px 16px;
+  text-align: left;
+}
+
+.stat-card span {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.activity-box {
+  display: grid;
+  gap: 20px;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.activity-header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.activity-header p {
+  margin: 0.4rem 0 0;
+  color: #94a3b8;
+}
+
+.post-box {
+  background: rgba(15, 23, 32, 0.95);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.post-header {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.post-header img {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+}
+
+.post-header textarea {
+  flex: 1;
+  min-height: 140px;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e6edf3;
+  padding: 18px;
+  resize: vertical;
+}
+
+.post-header textarea::placeholder {
+  color: #64748b;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons-post {
+  display: flex;
+  gap: 14px;
+}
+
+.icons-post i {
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.icons-post i:hover {
+  color: #20c997;
+}
+
+@media (max-width: 900px) {
+  .profile-summary {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-meta {
+    align-items: center;
+  }
+
+  .profile-actions {
+    justify-content: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-header {
+    flex-direction: column;
+  }
+
+  .post-actions {
+    justify-content: stretch;
+  }
+}
