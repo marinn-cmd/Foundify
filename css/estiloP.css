@@ -1,0 +1,488 @@
+/* Global reset and base font */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Page background and base text color */
+body{
+
+    background:#070C19;
+    color:white;
+
+}
+
+/* Header layout container */
+header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 80px;
+
+    background:#161B22;
+
+}
+
+/* Header title color */
+header h1{
+
+    color:white;
+
+}
+
+/* Brand accent color */
+header span{
+
+    color:#20C997;
+
+}
+
+/* Top navigation link styles */
+nav a{
+
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#20C997;
+
+}
+
+/* Floating top-right action button */
+nav:first-child{
+    position:absolute;
+    top:15px;
+    right:30px;
+}
+
+nav:first-child a{
+    color:var(--color-text);
+    text-decoration:none;
+    background:rgba(22,27,34,.9);
+    border:1px solid var(--color-border);
+    padding:10px 16px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+nav:first-child a:hover{
+    background:var(--color-accent);
+}
+
+/* Main site navigation bar */
+.navbar{
+    width:100%;
+    height:75px;
+    background:rgba(22,27,34,.95);
+    border-bottom:1px solid var(--color-border);
+    position:relative;
+    z-index:9999;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--color-accent);
+}
+
+/* Navigation menu list */
+.menu{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+/* Navigation links inside menu */
+.menu a{
+    color:var(--color-text);
+    text-decoration:none;
+    transition:.3s;
+    font-weight:500;
+}
+
+.menu a:hover{
+    color:var(--color-accent);
+}
+
+/* Icon group in navbar */
+.icons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.icons i{
+    cursor:pointer;
+    font-size:1.1rem;
+    transition:.3s;
+}
+
+.icons i:hover{
+    color:var(--color-accent);
+}
+
+.icons img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:2px solid var(--color-accent);
+}
+
+/* Profile dropdown trigger */
+.profile-menu{
+    position: relative;
+    z-index: 9999;
+}
+
+.profile-menu summary{
+    list-style:none;
+}
+
+.profile-menu summary::-webkit-details-marker{
+    display:none;
+}
+
+/* Profile dropdown menu panel */
+.dropdown-menu{
+    position: absolute;
+    top: 55px;
+    right: 0;
+
+    width: 180px;
+
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    overflow:hidden;
+    z-index:9999;
+    display:none;
+}
+
+/* Dropdown menu links */
+.dropdown-menu a{
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover{
+    background: #3fb950;
+}
+
+/* Show dropdown on hover or when open */
+.profile-menu:hover .dropdown-menu,
+.profile-menu[open] .dropdown-menu{
+    display: block;
+
+}
+
+/* Hero section */
+.hero{
+
+    text-align:center;
+    padding:60px;
+
+}
+
+/* Hero section heading */
+.hero h2{
+
+    font-size:45px;
+
+}
+
+/* Hero section paragraph */
+.hero p{
+
+    margin-top:20px;
+    color:#9CA3AF;
+
+}
+
+/* Category filter buttons */
+.categorias{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+/* Category button styles */
+.categorias button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#1F2937;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.categorias button:hover{
+
+    background:#20C997;
+
+}
+
+/* Project cards grid */
+.mosaico{
+
+    width:90%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+
+    gap:25px;
+
+    padding-bottom:80px;
+
+}
+
+/* Individual project card */
+.card{
+
+    background:#161B22;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+/* Card image styling */
+.card img{
+
+    width:100%;
+    height:230px;
+
+    object-fit:cover;
+
+}
+
+/* Card content area */
+.info{
+
+    padding:20px;
+
+}
+
+/* Project category badge */
+.info span{
+
+    background:#20C997;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}
+
+.info h3{
+
+    margin:20px 0 10px;
+
+}
+
+.info p{
+
+    color:#BFC6D1;
+
+}
+
+/* Progress bar background */
+.barra{
+
+    width:100%;
+    height:10px;
+
+    background:#30363D;
+
+    border-radius:20px;
+
+    margin:20px 0;
+
+}
+
+/* Progress fill */
+.progreso{
+
+    height:100%;
+    background:#20C997;
+
+    border-radius:20px;
+
+}
+
+/* Card action link */
+.info a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#20C997;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.info a:hover{
+
+    background:#16A085;
+
+}
+
+/* Footer del proyecto */
+.footer{
+    background: #0f1720;
+    color: #f5f7fb;
+    padding: 40px 8%;
+}
+
+.footer-contenido{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-info{
+    flex: 2;
+    min-width: 280px;
+}
+
+.footer-info h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.footer-info p{
+    line-height: 1.8;
+    text-align: justify;
+    color: #c1c9d3;
+}
+
+.footer-links{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h3{
+    margin-bottom: 15px;
+}
+
+.footer-links a{
+    color: #f5f7fb;
+    text-decoration: none;
+    margin: 8px 0;
+    transition: .3s;
+}
+
+.footer-links a:hover{
+    color: #20C997;
+    padding-left: 8px;
+}
+
+.footer-copy{
+    text-align: center;
+    margin-top: 35px;
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Large card span */
+.grande{
+
+    grid-column:span 2;
+
+}
+
+/* Tall card span */
+.alta{
+
+    grid-row:span 2;
+
+}
+
+@media(max-width:900px){
+
+.grande{
+
+grid-column:span 1;
+
+}
+
+.alta{
+
+grid-row:span 1;
+
+}
+
+header{
+
+padding:20px;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+}
