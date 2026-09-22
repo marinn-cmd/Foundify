@@ -1,15 +1,3 @@
-/* ============================================================
-   FOUNDIFY – Estilos externos
-   ============================================================
-   PLACEHOLDERS:
-   · --bg-image : reemplaza con la URL de tu imagen de fondo
-                  o con un gradiente personalizado.
-                  Ejemplo: url("../assets/bg.jpg")
-   · .logo-placeholder puede ser reemplazado por una <img>
-     directamente en el HTML.
-   ============================================================ */
-
-/* ---------- Reset & base ---------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -127,6 +115,7 @@ body {
   color: var(--color-text);
 }
 
+.field-select,
 .field-input {
   background-color: var(--color-input-bg);
   border: 1px solid var(--color-border);
@@ -138,6 +127,34 @@ body {
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
   outline: none;
   width: 100%;
+}
+
+.field-select {
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-text) 50%),
+    linear-gradient(135deg, var(--color-text) 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 2px), calc(100% - 12px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.field-select option {
+  background-color: #1c2128; /* mismo que --color-input-bg */
+  color: #e6edf3;            /* mismo que --color-text */
+}
+
+.field-select:focus,
+.field-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.15);
+}
+
+.field-input {
+  display: block;
 }
 
 .field-input::placeholder {
@@ -152,6 +169,39 @@ body {
 .field-hint {
   font-size: 0.78rem;
   color: var(--color-muted);
+}
+
+/* Fila para colocar campos lado a lado */
+.field-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* Uso: Tipo de documento (angosto) + Identificación (ancho) */
+.field-row-item-sm {
+  flex: 0 0 35%;
+}
+
+.field-row-item-lg {
+  flex: 1;
+}
+
+/* Uso: pares de igual ancho (Nombres/Apellidos, Género/Edad) */
+.field-row-item {
+  flex: 1;
+  min-width: 0; /* evita que el select empuje el layout en pantallas chicas */
+}
+
+@media (max-width: 480px) {
+  .field-row {
+    flex-direction: column;
+  }
+
+  .field-row-item-sm,
+  .field-row-item-lg,
+  .field-row-item {
+    flex: 1;
+  }
 }
 
 /* ---------- Fila de términos ---------- */

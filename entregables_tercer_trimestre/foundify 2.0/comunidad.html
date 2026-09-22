@@ -1,169 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Comunidad - Foundify</title>
-<link rel="stylesheet" href="stylec.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comunidad - Foundify</title>
+  <link rel="stylesheet" href="stylec.css">
 </head>
+
 <body>
 
-<!-- Sidebar -->
-<aside class="sidebar">
-  <a href="inicio.html">&#127968;</a>
-  <a href="comunidad.html" class="activo">&#128101;</a>
-</aside>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <a href="inicio.html">&#127968;</a>
+    <a href="comunidad.html" class="activo">&#128101;</a>
+  </aside>
 
-<!-- Main -->
-<main class="main">
+  <!-- Main -->
+  <main class="main">
 
-  <div class="topbar">
-    <h1>Comunidad</h1>
-    <div class="buscador">
-      🔍 <input type="text" placeholder="Buscar proyectos...">
+    <div class="topbar">
+      <h1>Comunidad</h1>
+      <div class="buscador">
+        🔍 <input type="text" placeholder="Buscar proyectos...">
+      </div>
+      <button class="btn-publicar">+ Publicar</button>
     </div>
-    <button class="btn-publicar">+ Publicar</button>
-  </div>
 
-  <div class="grid">
+    <div class="grid">
 
-    <!-- Card 1 -->
-    <article class="card">
-      <img class="card-img" src="https://cdn.shopify.com/s/files/1/0528/6569/5893/files/descarga.jpg?v=1764793098" alt="Eco Energia">
-      <div class="card-body">
-        <h3>Eco Energia</h3>
-        <p class="subtitulo">Reciclaje energético</p>
-        <div class="autor">
-          <img src="https://i.pravatar.cc/100?img=32" alt="">
-          <div>
-            <div class="nombre">Ana Morales</div>
-            <div class="tiempo">Hace 3 horas</div>
+      <!-- Card 1 -->
+      <article class="card">
+        <img class="card-img" src="https://cdn.shopify.com/s/files/1/0528/6569/5893/files/descarga.jpg?v=1764793098"
+          alt="Eco Energia">
+        <div class="card-body">
+          <h3>Eco Energia</h3>
+          <p class="subtitulo">Reciclaje energético</p>
+          <div class="autor">
+            <img src="https://i.pravatar.cc/100?img=32" alt="">
+            <div>
+              <div class="nombre">Ana Morales</div>
+              <div class="tiempo">Hace 3 horas</div>
+            </div>
           </div>
-        </div>
-        <div class="stats-row">
-          <button class="like" onclick>
-            <span class="icono">🤍</span><span class="conteo">156</span>
-          </button>
-          <button><span>💬</span> 23</button>
-        </div>
-        <span class="tag tecnologia">Tecnología</span>
-      </div>
-    </article>
-
-    <!-- Card 2 -->
-    <article class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500&q=80" alt="EcoLadrillo">
-      <div class="card-body">
-        <h3>EcoLadrillo</h3>
-        <p class="subtitulo">Reciclaje urbano</p>
-        <div class="autor">
-          <img src="https://i.pravatar.cc/100?img=15" alt="">
-          <div>
-            <div class="nombre">Luis Vega</div>
-            <div class="tiempo">Hace 5 horas</div>
+          <div class="stats-row">
+            <button class="like" onclick>
+              <span class="icono">🤍</span><span class="conteo">156</span>
+            </button>
+            <button><span>💬</span> 23</button>
           </div>
+          <span class="tag tecnologia">Tecnología</span>
         </div>
-        <div class="stats-row">
-          <button class="like">
-            <span class="icono">🤍</span><span class="conteo">98</span>
-          </button>
-          <button><span>💬</span> 12</button>
-        </div>
-        <span class="tag sostenibilidad">Sostenibilidad</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 3 -->
-    <article class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&q=80" alt="Aprende Conmigo">
-      <div class="card-body">
-        <h3>Aprende Conmigo</h3>
-        <p class="subtitulo">Educación para todos</p>
-        <div class="autor">
-          <img src="https://i.pravatar.cc/100?img=47" alt="">
-          <div>
-            <div class="nombre">Sofía Ramírez</div>
-            <div class="tiempo">Hace 1 día</div>
+      <!-- Card 2 -->
+      <article class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=500&q=80"
+          alt="EcoLadrillo">
+        <div class="card-body">
+          <h3>EcoLadrillo</h3>
+          <p class="subtitulo">Reciclaje urbano</p>
+          <div class="autor">
+            <img src="https://i.pravatar.cc/100?img=15" alt="">
+            <div>
+              <div class="nombre">Luis Vega</div>
+              <div class="tiempo">Hace 5 horas</div>
+            </div>
           </div>
-        </div>
-        <div class="stats-row">
-          <button class="like" onclick>
-            <span class="icono">🤍</span><span class="conteo">171</span>
-          </button>
-          <button><span>💬</span> 36</button>
-        </div>
-        <span class="tag educacion">Educación</span>
-      </div>
-    </article>
-
-    <!-- Card 4 -->
-    <article class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500&q=80" alt="Huertos Comunitarios">
-      <div class="card-body">
-        <h3>Huertos Comunitarios</h3>
-        <p class="subtitulo">Alimentación sostenible</p>
-        <div class="autor">
-          <img src="https://i.pravatar.cc/100?img=12" alt="">
-          <div>
-            <div class="nombre">María López</div>
-            <div class="tiempo">Hace 2 días</div>
+          <div class="stats-row">
+            <button class="like">
+              <span class="icono">🤍</span><span class="conteo">98</span>
+            </button>
+            <button><span>💬</span> 12</button>
           </div>
+          <span class="tag sostenibilidad">Sostenibilidad</span>
         </div>
-        <div class="stats-row">
-          <button class="like">
-            <span class="icono">🤍</span><span class="conteo">64</span>
-          </button>
-          <button><span>💬</span> 8</button>
-        </div>
-        <span class="tag sostenibilidad">Sostenibilidad</span>
-      </div>
-    </article>
+      </article>
 
-    <!-- Card 5 -->
-    <article class="card">
-      <img class="card-img" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80" alt="Música Para Todos">
-      <div class="card-body">
-        <h3>Música Para Todos</h3>
-        <p class="subtitulo">Clases abiertas y talleres</p>
-        <div class="autor">
-          <img src="https://i.pravatar.cc/100?img=5" alt="">
-          <div>
-            <div class="nombre">Diego Fernández</div>
-            <div class="tiempo">Hace 6 horas</div>
+      <!-- Card 3 -->
+      <article class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500&q=80"
+          alt="Aprende Conmigo">
+        <div class="card-body">
+          <h3>Aprende Conmigo</h3>
+          <p class="subtitulo">Educación para todos</p>
+          <div class="autor">
+            <img src="https://i.pravatar.cc/100?img=47" alt="">
+            <div>
+              <div class="nombre">Sofía Ramírez</div>
+              <div class="tiempo">Hace 1 día</div>
+            </div>
           </div>
+          <div class="stats-row">
+            <button class="like" onclick>
+              <span class="icono">🤍</span><span class="conteo">171</span>
+            </button>
+            <button><span>💬</span> 36</button>
+          </div>
+          <span class="tag educacion">Educación</span>
         </div>
-        <div class="stats-row">
-          <button class="like">
-            <span class="icono">🤍</span><span class="conteo">42</span>
-          </button>
-          <button><span>💬</span> 4</button>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500&q=80"
+          alt="Huertos Comunitarios">
+        <div class="card-body">
+          <h3>Huertos Comunitarios</h3>
+          <p class="subtitulo">Alimentación sostenible</p>
+          <div class="autor">
+            <img src="https://i.pravatar.cc/100?img=12" alt="">
+            <div>
+              <div class="nombre">María López</div>
+              <div class="tiempo">Hace 2 días</div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <button class="like">
+              <span class="icono">🤍</span><span class="conteo">64</span>
+            </button>
+            <button><span>💬</span> 8</button>
+          </div>
+          <span class="tag sostenibilidad">Sostenibilidad</span>
         </div>
-        <span class="tag cultura">Cultura</span>
-      </div>
-    </article>
+      </article>
 
-  </div>
-</main>
+      <!-- Card 5 -->
+      <article class="card">
+        <img class="card-img" src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80"
+          alt="Música Para Todos">
+        <div class="card-body">
+          <h3>Música Para Todos</h3>
+          <p class="subtitulo">Clases abiertas y talleres</p>
+          <div class="autor">
+            <img src="https://i.pravatar.cc/100?img=5" alt="">
+            <div>
+              <div class="nombre">Diego Fernández</div>
+              <div class="tiempo">Hace 6 horas</div>
+            </div>
+          </div>
+          <div class="stats-row">
+            <button class="like">
+              <span class="icono">🤍</span><span class="conteo">42</span>
+            </button>
+            <button><span>💬</span> 4</button>
+          </div>
+          <span class="tag cultura">Cultura</span>
+        </div>
+      </article>
 
-<section class="footer">
-  <div class="footer-contenido">
-    <div class="footer-info">
-      <h3>Foundify</h3>
-      <p>Foundify conecta proyectos innovadores con apoyo real. Descubre y comparte iniciativas que transforman la comunidad.</p>
     </div>
-    <div class="footer-links">
-      <h3>Enlaces</h3>
-      <a href="inicio.html">Inicio</a>
-      <a href="proyectos.html">Proyectos</a>
-      <a href="comunidad.html">Comunidad</a>
-      <a href="acerca_de.html">Acerca de</a>
-      <a href="contactanos.html">Contacto</a>
+  </main>
+
+  <section class="footer">
+    <div class="footer-contenido">
+      <div class="footer-info">
+        <h3>Foundify</h3>
+        <p>Foundify conecta proyectos innovadores con apoyo real. Descubre y comparte iniciativas que transforman la
+          comunidad.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Enlaces</h3>
+        <a href="inicio.html">Inicio</a>
+        <a href="proyectos.php">Proyectos</a>
+        <a href="comunidad.html">Comunidad</a>
+        <a href="acerca_de.html">Acerca de</a>
+        <a href="contactanos.html">Contacto</a>
+      </div>
     </div>
-  </div>
-  <div class="footer-copy">
-    <p>&copy; 2026 Foundify. Todos los derechos reservados.</p>
-  </div>
-</section>
+    <div class="footer-copy">
+      <p>&copy; 2026 Foundify. Todos los derechos reservados.</p>
+    </div>
+  </section>
 
 </body>
+
 </html>
