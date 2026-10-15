@@ -1,0 +1,184 @@
+/* ============================================================
+   FOUNDIFY - Estilos para la página de contacto
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-main: #0d1117;
+  --bg-secondary: #161b22;
+  --panel: rgba(22, 27, 34, 0.95);
+  --panel-soft: rgba(13, 17, 23, 0.95);
+  --border: #30363d;
+  --text-main: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #3fb950;
+  --accent-blue: #58a6ff;
+  --input-bg: #1c2128;
+  --input-border: #30363d;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  background-image:
+    radial-gradient(circle at top left, rgba(63, 185, 80, 0.18), transparent 22%),
+    radial-gradient(circle at bottom right, rgba(88, 166, 255, 0.12), transparent 25%),
+    url('Img/FondoLoginRegistrer.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-main);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.page {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.brand h1 {
+  font-size: 2.8rem;
+  letter-spacing: -0.04em;
+}
+
+.logo-accent {
+  color: var(--accent);
+}
+
+.brand-tagline {
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+.card {
+  background: var(--panel-soft);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-subtitle {
+  color: #b3c0cf;
+  margin-bottom: 1.75rem;
+  line-height: 1.7;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.field-label {
+  font-size: 0.95rem;
+  color: #dce7f2;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 6px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-main);
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.15);
+}
+
+.field-input::placeholder {
+  color: #64748b;
+}
+
+textarea.field-input {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.login-hint {
+  margin-top: 1.25rem;
+  color: var(--text-muted);
+}
+
+.link {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.footer a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}

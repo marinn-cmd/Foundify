@@ -1,0 +1,110 @@
+/* ============================================================
+   FOUNDIFY - Estilos de Login / Registro
+   Comentarios en español para mejorar la lectura y el mantenimiento.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #08090b;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    /* subtle grid bg */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+    p { font-size: 1rem; color: #3a4f62; margin-bottom: 2.5rem; }
+    .buttons { display: flex; gap: 0.75rem; }
+    .btn {
+      padding: 0.7rem 1.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: all .2s;
+    }
+    .btn-green { background: #00e676; color: #08090b; }
+    .btn-green:hover { background: #00c060; }
+    .btn-outline { background: transparent; border-color: #1f2d3d; color: #7a8fa6; }
+    .btn-outline:hover { border-color: #3a4f62; color: #fff; }
+
+    .footer {
+      background: #0f1720;
+      color: #f1f5f9;
+      padding: 32px 24px;
+      margin-top: 2rem;
+    }
+
+    .footer-contenido {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .footer-info {
+      flex: 1 1 300px;
+      min-width: 280px;
+    }
+
+    .footer-info h3 {
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+
+    .footer-info p {
+      line-height: 1.75;
+      color: #cbd5e1;
+    }
+
+    .footer-links {
+      flex: 1 1 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 8px 0;
+      transition: color .2s, padding-left .2s;
+    }
+
+    .footer-links a:hover {
+      color: #20c997;
+      padding-left: 8px;
+    }
+
+    .footer-copy {
+      text-align: center;
+      margin-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 16px;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    .logo {
+      display: block;
+      width: 50vw;
+      height: 10vw;
+      margin: 0 auto 1rem;
+    }
