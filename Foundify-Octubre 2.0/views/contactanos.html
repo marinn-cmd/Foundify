@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Foundify</title>
+    <link rel="stylesheet" href="../css/contactanos.css">
+</head>
+<body>
+    <div class="page">
+        <header class="brand">
+            <h1>Found<span class="logo-accent">ify</span></h1>
+            <p class="brand-tagline">¿Tienes una duda o quieres apoyarnos? Escríbenos.</p>
+        </header>
+
+        <main class="card">
+            <h2 class="card-title">Contáctanos</h2>
+            <p class="card-subtitle">Nuestro equipo está listo para ayudarte con consultas sobre proyectos, cuentas o colaboración.</p>
+            <form class="form">
+                <div class="field">
+                    <label class="field-label" for="name">Nombre</label>
+                    <input class="field-input" id="name" type="text" placeholder="Tu nombre" />
+                </div>
+                <div class="field">
+                    <label class="field-label" for="email">Correo electrónico</label>
+                    <input class="field-input" id="email" type="email" placeholder="tu@email.com" />
+                </div>
+                <div class="field">
+                    <label class="field-label" for="reason">Motivo</label>
+                    <select class="field-input" id="reason">
+                        <option>Selecciona una opción</option>
+                        <option>Soporte</option>
+                        <option>Propuesta de colaboración</option>
+                        <option>Reporte de error</option>
+                        <option>Otros</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label class="field-label" for="message">Mensaje</label>
+                    <textarea class="field-input" id="message" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button class="btn-primary" type="submit">Enviar mensaje</button>
+            </form>
+            <p class="login-hint">¿Quieres volver? <a class="link" href="../inicio.html">Regresa al inicio</a>.</p>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* =========================================
+   Variables de Color (Tema Foundify)
+   ========================================= */
+:root {
+  --bg: #0a0e14;
+  --card: #131a24;
+  --card-2: #0f151f;
+  --border: #232b38;
+  --green: #22c55e;
+  --green-2: #10b981;
+  --text: #f1f5f9;
+  --text-muted: #8b93a7;
+  --shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+
+/* =========================================
+   Estilos Base
+   ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text);
+}
+
+/* =========================================
+   Botones
+   ========================================= */
+.btn-publicar {
+  background: linear-gradient(90deg, var(--green), var(--green-2));
+  color: #03150b;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 22px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  box-shadow: 0 6px 14px rgba(34,197,94,0.25);
+  transition: transform .15s, box-shadow .15s;
+}
+
+.btn-publicar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(34,197,94,0.35);
+}
+
+.btn-secundario {
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+
+.btn-secundario:hover {
+  border-color: var(--green);
+}
+
+/* =========================================
+   Fondo de la Ventana Modal (Overlay)
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0; 
+  background: rgba(10, 14, 20, 0.85); /* Fondo oscuro con transparencia */
+  backdrop-filter: blur(5px);
+  display: none; /* Oculto por defecto, cambia a flex con JS */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal-overlay.activo {
+  display: flex;
+}
+
+/* =========================================
+   Caja de la Ventana Modal
+   ========================================= */
+.modal-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+/* Personalizar barra de scroll interna del modal */
+.modal-box::-webkit-scrollbar { 
+  width: 8px; 
+}
+.modal-box::-webkit-scrollbar-track { 
+  background: var(--bg); 
+  border-radius: 4px; 
+}
+.modal-box::-webkit-scrollbar-thumb { 
+  background: var(--border); 
+  border-radius: 4px; 
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.btn-cerrar-modal {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 26px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color .2s;
+}
+
+.btn-cerrar-modal:hover { 
+  color: var(--text); 
+}
+
+/* =========================================
+   Formulario Interno y Campos
+   ========================================= */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+/* Estilo para los inputs, textarea y select */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  background: var(--card-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color .2s;
+}
+
+/* Estilo para los inputs del tipo fecha (cambiando color del icono nativo) */
+.form-group input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--green);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group textarea { 
+  resize: vertical; 
+  min-height: 70px; 
+}
+
+/* Filas divididas en dos columnas */
+.form-row {
+  display: flex;
+  gap: 14px;
+}
+
+.form-row .form-group { 
+  flex: 1; 
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+/* Diseño responsivo para que en celulares los campos se apilen */
+@media (max-width: 480px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
