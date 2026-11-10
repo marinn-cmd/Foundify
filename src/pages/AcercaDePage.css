@@ -1,0 +1,234 @@
+.acerca-page {
+  position: relative;
+  min-height: 100vh;
+  color: #f1f5f9;
+  z-index: 1;
+}
+
+.acerca-nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(7, 11, 18, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 10;
+}
+
+.acerca-nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.acerca-nav .logo span {
+  color: #3fb950;
+}
+
+.acerca-nav .menu {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.acerca-nav .menu a {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.acerca-nav .menu a:hover {
+  color: #3fb950;
+}
+
+.acerca-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.acerca-hero-text {
+  flex: 1 1 450px;
+}
+
+.hero-label {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: rgba(63, 185, 80, 0.15);
+  border: 1px solid rgba(63, 185, 80, 0.3);
+  color: #3fb950;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.acerca-hero-text h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, #ffffff 40%, #a0aec0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.acerca-hero-text p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.acerca-hero-img {
+  flex: 1 1 450px;
+}
+
+.acerca-hero-img img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.acerca-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.acerca-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.acerca-card {
+  background: rgba(22, 27, 34, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.acerca-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(63, 185, 80, 0.4);
+}
+
+.acerca-card h3 {
+  font-size: 1.3rem;
+  color: #3fb950;
+  margin-bottom: 0.75rem;
+}
+
+.acerca-card p {
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.acerca-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #3fb950;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card span {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.acerca-cta {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.acerca-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.acerca-cta p {
+  color: #94a3b8;
+}
+
+.btn-cta {
+  padding: 0.85rem 2.2rem;
+  background: #3fb950;
+  color: #08090b;
+  font-weight: 700;
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+
+.btn-cta:hover {
+  background: #2ea043;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(63, 185, 80, 0.35);
+}
+
+.acerca-footer {
+  background: rgba(15, 23, 32, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+.acerca-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.acerca-footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.acerca-footer-links a {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.acerca-footer-links a:hover {
+  color: #3fb950;
+}
+
