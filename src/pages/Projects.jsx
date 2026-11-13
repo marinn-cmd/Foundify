@@ -1,28 +1,46 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProyectosCard from "../Componentes/ProyectosCard";
 import { API_URL } from '../Config';
 
 export default function ListaProyectos() {
+  const navigate = useNavigate();
+
   const [proyectos, setProyectos] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch(`${API_URL}/Proyectos.php`)
+  function cargarProyectos() {
+    setCargando(true);
+    setError(null);
+
+    fetch(`${API_URL}/Proyectos.php`, {
+      credentials: 'include' // envía la cookie de sesión
+    })
       .then((res) => {
+        // Sin sesión iniciada: mandar al login
+        if (res.status === 401) {
+          navigate('/login');
+          return null;
+        }
         if (!res.ok) {
           throw new Error('Error al cargar los proyectos');
         }
         return res.json();
       })
       .then((data) => {
-        setProyectos(data);
+        if (data === null) return; // ya se redirigió al login
+        setProyectos(Array.isArray(data) ? data : []);
         setCargando(false);
       })
       .catch((err) => {
         setError(err.message);
         setCargando(false);
       });
+  }
+
+  useEffect(() => {
+    cargarProyectos();
   }, []);
 
   if (cargando) {
@@ -37,23 +55,7 @@ export default function ListaProyectos() {
           Verifica que Apache esté iniciado en el panel de XAMPP y que la base de datos esté accesible en <code>{API_URL}/Proyectos.php</code>.
         </p>
         <button
-          onClick={() => {
-            setCargando(true);
-            setError(null);
-            fetch(`${API_URL}/Proyectos.php`)
-              .then((res) => {
-                if (!res.ok) throw new Error('Error al cargar los proyectos');
-                return res.json();
-              })
-              .then((data) => {
-                setProyectos(data);
-                setCargando(false);
-              })
-              .catch((err) => {
-                setError(err.message);
-                setCargando(false);
-              });
-          }}
+          onClick={cargarProyectos}
           style={{ padding: '10px 20px', backgroundColor: '#00d26a', color: '#000', border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer' }}
         >
           🔄 Reintentar conexión
